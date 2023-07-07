@@ -16,22 +16,22 @@ export default class Carousel {
     const element = createElement(`
       <div class="carousel">
         <div class="carousel__arrow carousel__arrow_right">
-          <img src="/assets/images/icons/angle-icon.svg" alt="icon">
+          <img src="./assets/images/icons/angle-icon.svg" alt="icon">
         </div>
         <div class="carousel__arrow carousel__arrow_left">
-          <img src="/assets/images/icons/angle-left-icon.svg" alt="icon">
+          <img src="./assets/images/icons/angle-left-icon.svg" alt="icon">
         </div>
 
         <div class="carousel__inner">
         ${this.slides.map(item => {
       return (`
         <div class="carousel__slide" data-id="${item.id}">
-          <img src="/assets/images/carousel/${item.image}" class="carousel__img" alt="slide">
+          <img src="./assets/images/carousel/${item.image}" class="carousel__img" alt="slide">
           <div class="carousel__caption">
             <span class="carousel__price">${'€' + item.price.toFixed(2)}</span>
             <div class="carousel__title">${item.name}</div>
             <button type="button" class="carousel__button">
-              <img src="/assets/images/icons/plus-icon.svg" alt="icon">
+              <img src="./assets/images/icons/plus-icon.svg" alt="icon">
             </button>
           </div>
         </div>`);
